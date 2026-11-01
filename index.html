@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martyna Zvirblyte — GIS & Earth Observation</title>
+<meta name="description" content="Martyna Zvirblyte — MSc student in Physical Geography and Ecosystem Science at Lund University, working with satellite, aerial and drone imagery and machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ════════════ NAV ════════════ -->
+<nav>
+  <a href="#" class="nav-name">Martyna Zvirblyte</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#resume">Résumé</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero">
+  <h1 class="hero-h1">
+    Martyna<br>
+    <em>Zvirblyte</em>
+  </h1>
+  <div>
+    <p class="hero-intro">
+      <strong>MSc student in Physical Geography and Ecosystem Science</strong> at Lund University, working with satellite, aerial and drone imagery and machine learning.
+    </p>
+    <p class="hero-meta">
+      <span class="pulse"></span>
+      55.7047° N &nbsp;·&nbsp; 13.1910° E
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-dark">View work ↓</a>
+      <a href="#about" class="btn btn-bare">About</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FULL-BLEED IMAGE BAR ════════════
+     Replace the SVG with a real image (best size 1600×500):
+     <img src="images/hero-map.jpg" alt="Description of the map">
+-->
+<div class="img-bar">
+   <img src= "images/map7.png" alt="Urban Greeness index, using fuzzy logic and Sentinel 2 vegetation and canopy products. ">
+  <div class="img-bar-caption">Urban Greeness Index — <span>Sentinel 2, Google Earth / Fuzzy Logic</span></div>
+</div>
+
+<!-- ════════════ WORK ════════════
+     Each project is a link — set href to the project page or PDF.
+     Update the count in .work-count when adding projects.
+-->
+<section class="work" id="work">
+  <div class="work-header">
+    <h2 class="work-title">Selected <em>work</em></h2>
+    <span class="work-count">03 projects</span>
+  </div>
+
+  <div class="proj-list">
+
+    <!-- FEATURED PROJECT — the big image and the three city thumbnails open the zoomable viewer
+         (#map-viewer, below the footer); ‹ › steps between the cities -->
+    <div class="proj-feat">
+      <button type="button" class="feat-vis" data-viewer data-group="lulc" data-src="LundLayout.png" data-title="Predicted Land Cover" data-sub="Lund, 2024" data-alt="Predicted land use and land cover map of Lund, 2024">
+        <img src="images/LundLayout.png" alt="Predicted land use and land cover map of Lund, 2024">
+        <span class="feat-zoom">⤢ Click to zoom</span>
+      </button>
+      <div class="feat-info">
+        <div>
+          <p class="proj-cat">Remote Sensing · Bachelor's thesis</p>
+          <h3 class="proj-title">Predicted Land Cover — <em>Lund, Svedala &amp; Sjöbo</em></h3>
+          <p class="proj-desc">
+            A deep learning pipeline for multi-class segmentation of aerial imagery, applied to three towns in Skåne (91% accuracy, κ 0.89). Accuracy fell with distance from the training region, consistent with Tobler's First Law of Geography. Data: Lantmäteriet 2024.
+          </p>
+        </div>
+        <div>
+          <div class="feat-cities">
+            <button type="button" class="city" data-viewer data-group="lulc" data-src="LundLayout.png" data-title="Predicted Land Cover" data-sub="Lund, 2024" data-alt="Predicted land use and land cover map of Lund, 2024">
+              <img src="images/LundLayout.png" alt="" loading="lazy" style="transform-origin:35% 59%">
+              <span class="gal-label">Lund</span>
+            </button>
+            <button type="button" class="city" data-viewer data-group="lulc" data-src="SvedalaLayout.png" data-title="Predicted Land Cover" data-sub="Svedala, 2024" data-alt="Predicted land use and land cover map of Svedala, 2024">
+              <img src="images/SvedalaLayout.png" alt="" loading="lazy" style="transform-origin:37% 50%">
+              <span class="gal-label">Svedala</span>
+            </button>
+            <button type="button" class="city" data-viewer data-group="lulc" data-src="SjoboLayout.png" data-title="Predicted Land Cover" data-sub="Sjöbo, 2024" data-alt="Predicted land use and land cover map of Sjöbo, 2024">
+              <img src="images/SjoboLayout.png" alt="" loading="lazy" style="transform-origin:40% 46%">
+              <span class="gal-label">Sjöbo</span>
+            </button>
+          </div>
+          <ul class="legend-row" aria-label="Land cover classes">
+            <li><i style="background:#b2b2b2"></i>Asphalt</li>
+            <li><i style="background:#ffffbe"></i>Bright roof</li>
+            <li><i style="background:#734c00"></i>Brown roof</li>
+            <li><i style="background:#000000"></i>Dark roof</li>
+            <li><i style="background:#d3ffbe"></i>Grass</li>
+            <li><i style="background:#267300"></i>Tree canopy</li>
+          </ul>
+          <span class="proj-tool">Python · Deep learning</span>
+          <span class="proj-tool">Aerial imagery · Lantmäteriet</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 — image gallery. Each image opens in the zoomable viewer;
+         images with the same data-group can be stepped through with ‹ › -->
+    <div class="proj-gal">
+      <div class="proj-gal-head">
+        <span class="proj-num">02</span>
+        <div>
+          <p class="proj-cat">Remote Sensing</p>
+          <h3 class="proj-title">Urban Greenness Index — <em>fuzzy logic overlay</em></h3>
+          <p class="proj-desc">Sentinel-2 vegetation and canopy products combined into an urban greenness index with fuzzy logic in ArcGIS, then draped over Google Earth 3D views.</p>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">Sentinel-2</span>
+          <span class="proj-tool">ArcGIS · Fuzzy Logic</span>
+          <span class="proj-tool">Google Earth</span>
+        </div>
+      </div>
+      <div class="gal-grid">
+        <button type="button" class="gal-item" data-viewer data-group="ugi" data-src="map7.png" data-title="Urban Greenness Index" data-sub="view 1 of 4" data-alt="Top-down view of forest and settlements with the urban greenness index overlay">
+          <img src="images/map7.png" alt="Top-down view of forest and settlements with the urban greenness index overlay" loading="lazy">
+        </button>
+        <button type="button" class="gal-item" data-viewer data-group="ugi" data-src="map6.png" data-title="Urban Greenness Index" data-sub="view 2 of 4" data-alt="3D view of an old town with the urban greenness index overlay">
+          <img src="images/map6.png" alt="3D view of an old town with the urban greenness index overlay" loading="lazy">
+        </button>
+        <button type="button" class="gal-item" data-viewer data-group="ugi" data-src="map2.png" data-title="Urban Greenness Index" data-sub="view 3 of 4" data-alt="3D view of apartment blocks and parkland with the urban greenness index overlay">
+          <img src="images/map2.png" alt="3D view of apartment blocks and parkland with the urban greenness index overlay" loading="lazy">
+        </button>
+        <button type="button" class="gal-item" data-viewer data-group="ugi" data-src="map1.png" data-title="Urban Greenness Index" data-sub="view 4 of 4" data-alt="Oblique view of a forest edge and suburb with the urban greenness index overlay">
+          <img src="images/map1.png" alt="Oblique view of a forest edge and suburb with the urban greenness index overlay" loading="lazy">
+        </button>
+      </div>
+    </div>
+
+    <!-- PROJECT 3 — image gallery + Köppen legend.
+         Images 1 and 2 share a layout, so stepping between them in the viewer works as a before/after. -->
+    <div class="proj-gal">
+      <div class="proj-gal-head">
+        <span class="proj-num">03</span>
+        <div>
+          <p class="proj-cat">Climate Analysis</p>
+          <h3 class="proj-title">Fire &amp; Climate — <em>Australia, 1921–2010</em></h3>
+          <p class="proj-desc">Gridded monthly temperature and precipitation were classified into Köppen climate zones decade by decade and compared with a century of large fires. South-western Australia showed a high correlation between fire activity and shifts in climate class.</p>
+          <p class="proj-credit">Group project</p>
+        </div>
+        <div class="proj-tools">
+          <span class="proj-tool">ArcGIS Pro</span>
+          <span class="proj-tool">Gridded climate data</span>
+        </div>
+      </div>
+      <div class="gal-grid">
+        <button type="button" class="gal-item gal-top" data-viewer data-group="aus" data-src="1921_1930.jpg" data-title="Köppen climate zones" data-sub="1921–1930" data-alt="Köppen climate classification of Australia, 1921–1930">
+          <img src="images/1921_1930.jpg" alt="Köppen climate classification of Australia, 1921–1930" loading="lazy">
+          <span class="gal-label">1921–1930</span>
+        </button>
+        <button type="button" class="gal-item gal-top" data-viewer data-group="aus" data-src="koppen2001_2010final.jpg" data-title="Köppen climate zones" data-sub="2001–2010" data-alt="Köppen climate classification of Australia, 2001–2010">
+          <img src="images/koppen2001_2010final.jpg" alt="Köppen climate classification of Australia, 2001–2010" loading="lazy">
+          <span class="gal-label">2001–2010</span>
+        </button>
+        <button type="button" class="gal-item" data-viewer data-group="aus" data-src="Largefiresfinal.jpg" data-title="Large fires" data-sub="1921–2010" data-alt="Large fires in Australia, 1921–2010">
+          <img src="images/Largefiresfinal.jpg" alt="Large fires in Australia, 1921–2010" loading="lazy">
+          <span class="gal-label">Large fires</span>
+        </button>
+        <button type="button" class="gal-item" data-viewer data-group="aus" data-src="correlation.jpg" data-title="Fire and climate change correlation" data-sub="result" data-alt="Grid cells with high correlation between fires and climate classification change">
+          <img src="images/correlation.jpg" alt="Grid cells with high correlation between fires and climate classification change" loading="lazy">
+          <span class="gal-label">Correlation</span>
+        </button>
+      </div>
+      <!-- Colours match the Köppen maps; hover a swatch for the full class name -->
+      <div class="legend" aria-label="Köppen climate classes">
+        <div class="legend-group">
+          <span class="legend-head">A · Tropical</span>
+          <ul>
+            <li title="Tropical monsoon"><i style="background:#74b0ff"></i>Am</li>
+            <li title="Tropical savanna"><i style="background:#0066ff"></i>Aw</li>
+          </ul>
+        </div>
+        <div class="legend-group">
+          <span class="legend-head">B · Arid</span>
+          <ul>
+            <li title="Hot desert"><i style="background:#fca67f"></i>BWh</li>
+            <li title="Cold desert"><i style="background:#ff8080"></i>BWk</li>
+            <li title="Hot semi-arid"><i style="background:#ff5500"></i>BSh</li>
+            <li title="Cold semi-arid"><i style="background:#ff0000"></i>BSk</li>
+          </ul>
+        </div>
+        <div class="legend-group">
+          <span class="legend-head">C · Temperate</span>
+          <ul>
+            <li title="Hot-summer Mediterranean"><i style="background:#a5ff73"></i>Csa</li>
+            <li title="Warm-summer Mediterranean"><i style="background:#cdff66"></i>Csb</li>
+            <li title="Monsoon-influenced humid subtropical"><i style="background:#55ff00"></i>Cwa</li>
+            <li title="Subtropical highland"><i style="background:#98e600"></i>Cwb</li>
+            <li title="Humid subtropical"><i style="background:#73a800"></i>Cfa</li>
+            <li title="Temperate oceanic"><i style="background:#38a800"></i>Cfb</li>
+            <li title="Subpolar oceanic"><i style="background:#4ce600"></i>Cfc</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════ ABOUT ════════════ -->
+<section class="about" id="about">
+  <div>
+    <p class="about-sup">About</p>
+    <h2 class="about-h">About <em>me</em></h2>
+    <div class="about-body">
+      <p>I'm studying for a Master's in Physical Geography and Ecosystem Science at Lund University, with a focus on climate, GIS and remote sensing.</p>
+      <p>Most of my work uses satellite, aerial and drone imagery: land cover segmentation with deep learning for my bachelor's thesis, methane detection at HKUST, and forest inventory at Katam Technologies.</p>
+      <p>Open to opportunities in physical geography, earth observation — freelance or internship/research.</p>
+    </div>
+    <div class="about-actions">
+      <a href="mailto:martyna.zvirblyte@gmail.com" class="btn btn-dark">Get in touch ↗</a>
+      <a href="https://linkedin.com/in/martyna-zvirblyté" class="btn btn-bare" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div>
+    <div class="sk">
+      <span class="sk-label">Software</span>
+      <p class="sk-text">Python, SQL (basic), AWS, Linux, LaTeX, ArcGIS Pro, QGIS, Google Earth Engine, Excel, Canva.</p>
+    </div>
+    <div class="sk">
+      <span class="sk-label">Specialisms</span>
+      <p class="sk-text">GIS, climate, Deep learning for image segmentation and object detection, land cover classification, drone and satellite imagery, cartographic design.</p>
+    </div>
+    <div class="sk">
+      <span class="sk-label">Languages</span>
+      <p class="sk-text">English (fluent), Lithuanian (native), Swedish (fluent), Russian (basic).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ RÉSUMÉ ════════════
+     Each .cv-item is one line of the CV: dates | role, place and one sentence.
+-->
+<section class="resume" id="resume">
+  <div class="resume-side">
+    <p class="about-sup">Résumé</p>
+    <h2 class="resume-h">Experience &amp;<br><em>education</em></h2>
+  </div>
+
+  <div class="cv">
+    <div class="cv-group">
+      <h3 class="sk-label">Experience</h3>
+      <div class="cv-item">
+        <span class="cv-date">Jun 2026 – now</span>
+        <div>
+          <p class="cv-role">Forest Data Analyst</p>
+          <p class="cv-org">Katam Technologies · Lund</p>
+          <p class="cv-desc">Processing drone and satellite imagery for forest inventory, extracting forest health and biomass metrics with Python geospatial libraries.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Mar – Jun 2026</span>
+        <div>
+          <p class="cv-role">Bachelor's Thesis Intern</p>
+          <p class="cv-org">Green Urbansights, ESA start-up incubatee · Lund</p>
+          <p class="cv-desc">Built a deep learning pipeline for multi-class aerial image segmentation of urban areas (91% accuracy, κ 0.89). Accuracy fell with distance from the training region, consistent with Tobler's First Law of Geography.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Sep – Dec 2025</span>
+        <div>
+          <p class="cv-role">Research Intern</p>
+          <p class="cv-org">Hong Kong University of Science and Technology</p>
+          <p class="cv-desc">Adapted Faster R-CNN and YOLO models to satellite imagery for methane emission analysis from mines in China.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Sep – Nov 2024</span>
+        <div>
+          <p class="cv-role">Environmental Consultancy Project</p>
+          <p class="cv-org">Sustainalink · Lund</p>
+          <p class="cv-desc">Developed sustainable land management strategies for a golf club, balancing ecological preservation and practical land use.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-group">
+      <h3 class="sk-label">Education</h3>
+      <div class="cv-item">
+        <span class="cv-date">2026 – 2028</span>
+        <div>
+          <p class="cv-role">MSc Physical Geography &amp; Ecosystem Science</p>
+          <p class="cv-org">Lund University</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">2023 – 2026</span>
+        <div>
+          <p class="cv-role">BSc Physical Geography &amp; Ecosystem Science</p>
+          <p class="cv-org">Lund University</p>
+          <p class="cv-desc">GIS, remote sensing, climatology, hydrology, ecosystem analysis and statistics.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Aug 2025 – Jan 2026</span>
+        <div>
+          <p class="cv-role">Exchange term, Department of Physics</p>
+          <p class="cv-org">Hong Kong University of Science and Technology</p>
+          <p class="cv-desc">Satellite remote sensing for weather, environmental physics, astrophysics, and AI &amp; ethics.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-group">
+      <h3 class="sk-label">Talks &amp; recognition</h3>
+      <div class="cv-item">
+        <span class="cv-date">2027</span>
+        <div>
+          <p class="cv-role">Visiting Researcher <em>(upcoming)</em></p>
+          <p class="cv-org">ESA Φ-lab</p>
+          <p class="cv-desc">Awarded through the Phinnovation Summit student pitch competition.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Jun 2026</span>
+        <div>
+          <p class="cv-role">Speaker &amp; pitch competition winner</p>
+          <p class="cv-org">ESA Phinnovation Summit · Frascati, Italy</p>
+          <p class="cv-desc">Presented object-based land cover classification for urban environments. Selected with a full scholarship by the ESA Education Office.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Apr 2026</span>
+        <div>
+          <p class="cv-role">Delegate, UN COPUOS Legal Subcommittee</p>
+          <p class="cv-org">United Nations · Vienna</p>
+          <p class="cv-desc">Selected by the Space Generation Advisory Council to represent youth in Earth observation and space at the 65th session.</p>
+        </div>
+      </div>
+      <div class="cv-item">
+        <span class="cv-date">Mar 2025</span>
+        <div>
+          <p class="cv-role">ESA Academy — Solutions from Space to Earth</p>
+          <p class="cv-org">European Space Agency</p>
+          <p class="cv-desc">Selected to attend the academy with 30 European and Canadian students, worked in international teams on systems thinking, resource optimisation and technology transfer.</p>
+        </div>
+      </div>
+
+      <div class="cv-photos">
+        <button type="button" class="cv-photo" data-viewer data-group="events" data-src="images/events/phinnovation-summit-2026.jpg" data-title="ESA Phinnovation Summit" data-sub="Frascati, 2026" data-alt="Martyna speaking on stage at the ESA Phinnovation Summit 2026">
+          <img src="images/events/phinnovation-summit-2026.jpg" alt="Martyna speaking on stage at the ESA Phinnovation Summit 2026" loading="lazy" style="object-position:84% 40%">
+        </button>
+        <button type="button" class="cv-photo" data-viewer data-group="events" data-src="images/events/un-copuos-vienna-2026.jpg" data-title="UN COPUOS" data-sub="Vienna, 2026" data-alt="Martyna in the UN COPUOS meeting room in Vienna">
+          <img src="images/events/un-copuos-vienna-2026.jpg" alt="Martyna in the UN COPUOS meeting room in Vienna" loading="lazy" style="object-position:center 45%">
+        </button>
+        <button type="button" class="cv-photo" data-viewer data-group="events" data-src="images/events/esa-academy-2025.jpg" data-title="ESA Academy" data-sub="2025" data-alt="Martyna outside an ESA building during ESA Academy">
+          <img src="images/events/esa-academy-2025.jpg" alt="Martyna outside an ESA building during ESA Academy" loading="lazy" style="object-position:center 55%">
+        </button>
+      </div>
+      <div class="cv-captions">
+        <span>Phinnovation Summit, 2026</span>
+        <span>UN COPUOS, Vienna, 2026</span>
+        <span>ESA Academy, 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <span class="foot-name">Martyna Zvirblyte</span>
+  <ul class="foot-links">
+    <li><a href="mailto:martyna.zvirblyte@gmail.com">Email</a></li>
+    <li><a href="https://linkedin.com/in/martyna-zvirblyté" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://github.com/mzvirblyte" target="_blank" rel="noopener">GitHub</a></li>
+  </ul>
+</footer>
+
+<!-- ════════════ ZOOMABLE MAP VIEWER ════════════
+     Opened by any element with data-viewer. That element's data-src, data-title,
+     data-sub and data-alt set the image and heading shown here.
+     For a sharper zoom, export the map at a higher resolution.
+-->
+<dialog class="viewer" id="map-viewer" aria-label="Map viewer">
+  <div class="viewer-bar">
+    <span class="viewer-title"><span class="viewer-name"></span> — <em></em></span>
+    <div class="viewer-tools">
+      <button type="button" data-zoom="prev" class="viewer-step" aria-label="Previous image">‹</button>
+      <button type="button" data-zoom="next" class="viewer-step" aria-label="Next image">›</button>
+      <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+      <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+      <button type="button" data-zoom="reset">Reset</button>
+      <button type="button" data-zoom="close" aria-label="Close">✕</button>
+    </div>
+  </div>
+  <div class="viewer-stage">
+    <img alt="" draggable="false">
+  </div>
+  <p class="viewer-hint">Scroll or pinch to zoom · drag to move · Esc to close</p>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="js/viewer.js"></script>
+
+</body>
+</html>
